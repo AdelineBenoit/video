@@ -45,6 +45,8 @@ try {
     // var_dump($datas);
     $connexion = null; 
 
+    //tableau
+
 foreach ($datas as $el){
     echo "<tr><td>Film : " . $el['ID_FILM']."'<img src='/FilmMiniatures/'" . $el[5] . "</td>";
     echo "<tr><td>Titre : " . $el[3] . "</td>";
@@ -55,7 +57,7 @@ foreach ($datas as $el){
 }
 }
 
-
+//Si erreur
 
 catch (PDOException $error) {
     echo 'n° ' . $error->getCode() . '<br/>';
