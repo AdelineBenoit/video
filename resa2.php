@@ -23,7 +23,7 @@ include("VideoClub.php");
                 <th>Année</th>
                 <th>Réalisateur</th>
             </tr>
-            
+
             <?php
 
             $server = "localhost";
@@ -42,6 +42,8 @@ include("VideoClub.php");
             //$requete = "SELECT *  FROM film ORDER BY ".$_POST["genre"];
             // }
 
+            //connexion a la base de donnée
+
             try {
                 $connexion = new PDO('mysql:host=' . $server . ';dbname=' . $bdd, $user, $password);
                 $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -49,17 +51,17 @@ include("VideoClub.php");
                 $resultat = $connexion->query($requete);
                 $datas = $resultat->fetchAll();
                 // var_dump($datas);
-                $connexion = null; 
-              
+                $connexion = null;
+
 
                 // echo "connecte";
                 //  var_dump($datas);
 
-                //boucle tableau
-                
+                //boucle tableau recupere l'image, le titre et l'année
+
                 foreach ($datas as $el) {
                     // var_dump($el);
-                    echo "<tr><td><a href='resa3.php?id_film=".$el['ID_FILM']."'><img src='/FilmMiniatures/" . $el[8] . "/" . $el[5] ."'></a> </td>";
+                    echo "<tr><td><a href='resa3.php?id_film=" . $el['ID_FILM'] . "'><img src='/FilmMiniatures/" . $el[8] . "/" . $el[5] . "'></a> </td>";
                     echo "<td>Titre : " . $el[3] . " </td>";
                     echo "<td>Année : " . $el[4] . " </td>";
                     // echo '<td><img src= strtok (/FilmAffiche/)'.'"></td></tr>';
@@ -67,9 +69,7 @@ include("VideoClub.php");
                     // echo "réalisateur : ".$el[]." ";
                     // echo "<a href=resa3.php>resa3</a>";
                 }
-                // foreach ($datas as $ob) {
-                //     echo "Nom réalisateur : " . $ob[1] . "/" . $ob[3] . "</br>";
-                // }
+                
 
             } catch (PDOException $error) {
                 echo 'n° ' . $error->getCode() . '<br/>';
@@ -78,12 +78,12 @@ include("VideoClub.php");
 
 
             ?>
-        
+
 
         </table>
-         <button type="bouton"><a href="VCIresa.php">autre type de film</a></button>
+        <button type="bouton"><a href="VCIresa.php">autre type de film</a></button>
 
-         <button type="bouton"><a href="VideoClub.php">retour accueil</a></button>
+        <button type="bouton"><a href="VideoClub.php">retour accueil</a></button>
 
     </div>
 </body>
