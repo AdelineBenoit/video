@@ -1,0 +1,23 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+h1 {
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    color: blue;
+    
+}
+
+.ligne {
+    background-color: aquamarine;
+    border: 1px solid blue;
+    border-radius: 5%;
+}
+table {
+    
+    background-color: aquamarine;
+}
+
