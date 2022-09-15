@@ -8,6 +8,10 @@
     <title>Document</title>
 </head>
 <body>
+
+<h1>Voici le film que vous avez sélectionnez : </h1>
+
+<table>
     
 <tr>
                 <th>Miniatures</th>
@@ -65,6 +69,7 @@ catch (PDOException $error) {
 }
 
 ?>
+</table>
 
 </body>
 </html>
