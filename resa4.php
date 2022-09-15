@@ -18,7 +18,9 @@ $user = "root";
 $password = "root";
 $bdd = "video";
 
-$adherent = "SELECT * FROM adherent WHERE NUM_ADHERENT;";
+$adh = $_GET["nom"];
+$adherent = "SELECT adherent.NUM_ADHERENT , adherent.NOM_ADHERENT FROM adherent";
+var_dump($_GET);
 
 try {
     $connexion = new PDO('mysql:host=' . $server . ';dbname=' . $bdd, $user, $password);
@@ -32,6 +34,7 @@ try {
     $connexion = null; 
 
     var_dump($adherent);
+    
 
 
 }

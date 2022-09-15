@@ -44,7 +44,7 @@
       <?php
     include("Menu.html")
     ?>
-    <p>Je suis sur accueil</p>
+    <!-- <p>Je suis sur accueil</p> -->
     <!-- <h1>Bienvenue sur le site du Vidéo-Club</h1> -->
     <main>
         

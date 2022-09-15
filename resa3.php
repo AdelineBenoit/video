@@ -57,7 +57,7 @@ try {
       $connexion = null; 
 
     //tableau
-var_dump($datas2);
+// var_dump($datas2);
 foreach ($datas as $el){
     echo "<tr><td>Film : " . $el['ID_FILM']."'<img src='/FilmMiniatures/'" . $el[5] . "</td>";
     echo "<tr><td>Titre : " . $el[3] . "</td>";
@@ -79,14 +79,17 @@ catch (PDOException $error) {
 
 </table>
 
+<form method="get"action="resa4.php">
+
 <p>Nom</p>
-<input type="text">
+<input name="nom" type="text">
 <br/>
 <p>N° adhérant</p>
-<input type="text">
+<input name="numero" type="text">
 <br/>
-<button id="reserver" type="bouton"><a href="resa4.php">Réserver</a></button>
+<button id="reserver" type="submit">Réserver</button>
 <button id="annuler" type="bouton">Annuler</button>
+</form>
 
 </body>
 </html>
