@@ -22,7 +22,7 @@
     $user = "root";
     $password = "root";
     $bdd = "video";
-
+    var_dump($_GET);
     $adh = $_GET["nom"];
     $adherent = "SELECT adherent.NUM_ADHERENT , adherent.NOM_ADHERENT FROM adherent";
     // var_dump($_GET);

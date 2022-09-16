@@ -43,9 +43,6 @@ include("en-tete.php");
             //    var_dump ($requete);
             // $requete2 = "SELECT * FROM star =".$_post['type'];
 
-            // }else{
-            //$requete = "SELECT *  FROM film ORDER BY ".$_POST["genre"];
-            // }
 
             //connexion à la base de donnée
 
@@ -70,26 +67,19 @@ include("en-tete.php");
                     // var_dump($el);
                     echo "<tr><td class='ligne'>Titre : " . $el[3] . " </td>";
                     echo "<td class='ligne'>Année : " . $el[4] . " </td>";
-                    // foreach ($datas2 as $el2) {
-                    //     if($el[2] === $el2[0])
-                    //     echo "<tr><td class='ligne'>Réalisateur : " . $el2[1];
-                    //     break;
-                    // }
                     echo "<td class='ligne'>" . $el['NOM_STAR'] . "</td>";
-
                     echo "<td class='ligne' ><a href='resa3.php?id_film=" . $el['ID_FILM'] . "'><img src='/FilmMiniatures/" . $el[8] . "/" . $el[5] . "'></a> </td>";
 
                     // echo '<td><img src= strtok (/FilmAffiche/)'.'"></td></tr>';
                     // echo "<img src='/FilmAffiches/>";
                     // echo "réalisateur : ".$el[]." ";
                     // echo "<a href=resa3.php>resa3</a>";
-
                 }
+
             } catch (PDOException $error) {
                 echo 'n° ' . $error->getCode() . '<br/>';
                 die('Erreur : ' . $error->getMessage() . '<br/>');
             }
-
 
             ?>
 

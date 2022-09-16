@@ -39,7 +39,7 @@
 
 
         $idmovies = $_GET["id_film"];
-        $film = "SELECT * FROM film  join star WHERE id_film='" . $idmovies . "'";
+        $film = "SELECT * FROM film  join star ON id_realis = id_star NATURAL JOIN typefilm WHERE id_film=" . $idmovies;
         $sql = "SELECT * FROM adherent WHERE NUM_ADHERENT;";
         // var_dump($idmovies);
 
@@ -50,28 +50,28 @@
             $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             // echo 'connecté à la base de données'.'<br>';
             $resultat = $connexion->query($film);
-            $datas = $resultat->fetchAll();
+            $datas = $resultat->fetch();
             $resultat2 = $connexion->query($sql);
             $datas2 = $resultat2->fetchAll();
 
             $connexion = null;
-            var_dump($datas);
+            // var_dump($datas);
 
 
             //tableau
-            // var_dump($datas2);
-            foreach ($datas as $el) {
+            var_dump($datas);
+            // foreach ($datas as $el) {
 
-                echo "<td class='ligne'>" . $el[3] . "</td>";
-                echo "<td class='ligne'>" . $el[4] . "</td>";
-                echo "<td class='ligne'>" . $el[6] . "</td>";
-                echo "<td class='ligne'>" . $el[8] . "</td>";
-                echo "<td classe 'ligne'>" . $el[5] . "</td>";
-                echo "<td class='ligne' ><a href='resa3.php?id_film=" . $el['ID_FILM'] . "'><img src='/FilmMiniatures/" . $el[8] . "/" . $el[5] . "'></a> </td></tr>";
-                break;
+                echo "<td class='ligne'>" . $datas[3] . "</td>";
+                echo "<td class='ligne'>" . $datas[4] . "</td>";
+                echo "<td class='ligne'>" . $datas[6] . "</td>";
+                echo "<td class='ligne'>" . $datas[9].' '.$datas[8] . "</td>";
+                // echo "<td classe 'ligne'>" . $datas[5] . "</td>";
+                echo "<td class='ligne' ><a href='resa3.php?id_film=" . $datas['ID_FILM'] . "'><img src='/FilmMiniatures/" . $datas[10] . "/" . $datas[5] . "'></a> </td></tr>";
+                // break;
 
                 // echo " Je suis sur resa.3";}
-            }
+            // }
         }
         // foreach ($datas3 as $el3) {
         //     // if($el[2] === $el2[0])
@@ -97,6 +97,7 @@
         <p>N° adhérant</p>
         <input name="numero" type="text">
         <br />
+        <input type="text" hidden name="id_film" value="<?= $_GET['id_film']?>">
         <button id="reserver" type="submit">Réserver</button>
         <button id="annuler" type="bouton">Annuler</button>
     </form>

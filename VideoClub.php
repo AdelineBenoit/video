@@ -20,42 +20,29 @@
         </div>
         <div class="date">
 
-            <?PHP
-            date_default_timezone_set("Europe/Paris");
-            $dateDuJour = getdate();
-
-            $mois = "";
-            $jours = "";
-
-            if ($dateDuJour["mon"] = 9) {
-                $mois = "Septembre";
-            } else {
-                $mois = $dateDuJour["mon"];
-            }
-            if ($dateDuJour["mday"] < 10) {
-                $jours = "0" . $dateDuJour["mday"];
-            } else {
-                $jours = $dateDuJour["mday"];
-            }
-            echo $jours . " " . $mois . " " . $dateDuJour["year"] . "<br>";
-
+            <?php
+            echo "Nous sommes le :" . date("d.m.y");
+            echo '<br>';
+            date_default_timezone_set("europe/paris");
+            echo " Il est :" . date("H:i:s");
             ?>
             <br />
 
             <a href="#" id="admin">Admin</a>
             <div id="formulaire">
-                <form action="" method="$POST">
+                <form action="Admin.php" method="post">
                     <p>Login</p>
-                    <input name="login" type="text">
+                    <input name="LOGIN_ADMIN" type="text">
                     <p>Pass</p>
-                    <input name="pass" type="text">
+                    <input name="PASS_ADMIN" type="text">
+                    <button id="retour" type="bouton">Retour</button>
+                <button type="submit">Go !</button>
                 </form>
-                <button id="retour" type="bouton">Retour</button>
-                <button type="bouton"><a href="Admin.php">Go !</a></button>
+                
 
                 <?php
 
-                include("Menu.html");
+                include("en-tete.php");
                 $ad = "SELECT * FROM admin";
 
 
@@ -75,18 +62,8 @@
                     $datas = $resultat->fetchAll();
                     $connexion = null;
 
-                    var_dump($datas);
+             
 
-
-
-                    foreach ($datas as $el) {
-                        if($datas === $el){
-                            echo "incrit";
-                        }else{
-                            echo"pas inscrit";
-                        }
-                        
-                    }
 
                     //     echo "Admin" . $el[0] . "</br>";
                     //     echo "Admin" . $el[1] . "</br>";
