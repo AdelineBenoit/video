@@ -10,7 +10,7 @@
 <body>
     <p>resa5</p>
     <?php
-include("VideoClub.php");
+include("en-tete.php");
 
 $server = "localhost";
 $user = "root";

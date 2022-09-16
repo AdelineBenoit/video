@@ -16,7 +16,7 @@
     <p>resa4</p>
     <?php
 
-    include("VideoClub.php");
+    include("en-tete.php");
 
     $server = "localhost";
     $user = "root";
