@@ -14,9 +14,11 @@ include("VideoClub.php");
 </head>
 
 <body>
-    <div>
+    <div class="titre">
         <h1>Liste des films :</h1>
         <h1>Sélectionnez le film que vous pouvez réserver :</h1>
+    </div>
+    <div>
         <table>
             <tr>
                 <th class="ligne">Titre</th>
@@ -73,7 +75,7 @@ include("VideoClub.php");
                     //     echo "<tr><td class='ligne'>Réalisateur : " . $el2[1];
                     //     break;
                     // }
-                    echo "<td class='ligne'>".$el['NOM_STAR']."</td>";
+                    echo "<td class='ligne'>" . $el['NOM_STAR'] . "</td>";
 
                     echo "<td class='ligne' ><a href='resa3.php?id_film=" . $el['ID_FILM'] . "'><img src='/FilmMiniatures/" . $el[8] . "/" . $el[5] . "'></a> </td>";
 

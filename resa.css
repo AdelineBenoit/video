@@ -4,13 +4,7 @@
     text-decoration: none;
 }
 
-h1 {
-    font-style: italic;
-    display: flex;
-    justify-content: center;
-    color: blue;
-    
-}
+
 
 .ligne {
     background-color: aquamarine;
@@ -25,11 +19,27 @@ table {
     display: flex;
 }
 
-h3 {
+.titre{
     font-style: italic;
     display: flex;
     justify-content: center;
     color: blue;
+
+
+}
+.date {
+    display: flex;
+    justify-content: flex-end;
+    color: blue;
+
+}
+
+
+
+#formulaire {
+    background-color: rgb(216, 243, 247);
+    width: 300px;
+    height: 150px;
 
 
 }
