@@ -15,7 +15,7 @@
        <div> <img src="./DesignVideoClub/VCLogo.gif" alt="Logo"></div>
        <div>
        <h1> Vidéo-club</h1>
-        <p>... et si on faisait une toile, à la maison ?</p>
+        <h3>... et si on faisait une toile, à la maison ?</h3>
 </div>
 
 <?PHP

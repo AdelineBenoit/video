@@ -37,12 +37,11 @@ $bdd = "video";
 // $film = "SELECT * FROM film WHERE id_film ='" . $_POST['type'] . "'";
 
 $idmovies =$_GET["id_film"];
-$film = "SELECT * FROM film WHERE id_film='".$idmovies."'";
+$film = "SELECT * FROM film  join star WHERE id_film='".$idmovies."'";
 // $adherent = "SELECT * FROM adherent WHERE NUM_ADHERENT = '" . $_POST['type'] . "'";
 // $numad =  $_post["NUM_ADHERENT"];
 // $adherent = "SELECT * FROM adherent WHERE NUM_ADHERENT ='".$numad."'";
 $sql = "SELECT * FROM adherent WHERE NUM_ADHERENT;";
-$real = "select star.ID_STAR, star.NOM_STAR, film.ID_REALIS FROM star join film on star.ID_STAR = film.ID_REALIS";
 // var_dump($idmovies);
 
 //connexion a la base de donnée
@@ -55,8 +54,7 @@ try {
     $datas = $resultat->fetchAll();
     $resultat2 = $connexion->query($sql);
     $datas2 = $resultat2->fetchAll();
-    $resultat3 = $connexion->query($real);
-    $datas3 = $resultat3->fetchAll();
+   
       $connexion = null; 
 
     //tableau
@@ -66,14 +64,15 @@ foreach ($datas as $el){
     echo "<tr><td class='ligne'>" . $el['ID_FILM']."'<img src='/FilmMiniatures/'" . $el[5] . "</td>"; 
     echo "<td class='ligne'>" . $el[3] . "</td>";
     echo "<td class='ligne'>" . $el[4] . "</td>";
-    echo "<td class='film'>" . $el[6] . "<td></tr>";
+    echo "<td class='ligne'>" . $el[6] . "<td>";
+    echo"<td class='ligne'>" . $el[8] . "<td></tr>";
 
 // echo " Je suis sur resa.3";}
-}
-foreach ($datas3 as $el3) {
-    // if($el[2] === $el2[0])
-    echo "<tr><td class='ligne'>Réalisateur : " . $el3[1];
 }}
+// foreach ($datas3 as $el3) {
+//     // if($el[2] === $el2[0])
+//     echo "<tr><td class='ligne'>Réalisateur : " . $el3[1];
+// }}
 
 //Si erreur
 
@@ -100,3 +99,10 @@ catch (PDOException $error) {
 
 </body>
 </html>
+
+
+
+<!-- 
+$sql = "select * from film\n"
+
+    . "join star;"; -->

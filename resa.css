@@ -1,6 +1,7 @@
 *{
     margin: 0%;
     padding: 0%;
+    text-decoration: none;
 }
 
 h1 {
@@ -20,4 +21,15 @@ table {
     
     background-color: aquamarine;
 }
+.menu {
+    display: flex;
+}
 
+h3 {
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    color: blue;
+
+
+}
