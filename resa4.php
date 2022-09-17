@@ -55,7 +55,7 @@
             }
         }
         if ($bool) {
-            echo "<p class='adherent'>Bonjour </p>" . $el[1] ;
+            echo "<p class='adherent'>Bonjour, réservation réussie ! </p>" . $el[1] ;
         } else {
             echo ' <p class="refus"> Veuillez vous inscrire.</p>';
         }

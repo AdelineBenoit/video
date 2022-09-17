@@ -19,17 +19,17 @@
     include("en-tete.php");
     ?>
 
-    <div>
+    <div class="creerFilm">
 
-        <form action="creer.php" method="post">
+        <form action="creer.php" method="get">
             <p>Identifiant :</p>
             <input type="text" name="identifiant"> </br>
             <p>Titre :</p>
-            <input type="text" name="TITRE_FILM"> </br>
+            <input type="text" name="titre_film"> </br>
 
             <!-- <input type="select"> -->
             <libellé>Type de film</libellé> </br>
-            <select>
+            <select name="type">
             <option name="ANI">Animation</option>
             <option name="HOR">Horreur</option>
             <option name="COM">Comédie</option>
@@ -39,16 +39,16 @@
             </select>
 
             <p>Réalisateur :</p>
-            <input type="select" name="realisateur"> </br>
+            <input type="select" name="realisateur" /> </br>
             <p>Année de sortie :</p>
-            <input type="text" name="annee"> </br>
+            <input type="text" name="annee" /> </br>
             <p>Affiche :</p>
-            <input type="text" name="affiche"> </br>
+            <input type="text" name="affiche" /> </br>
             <p>Résumé :</p>
-            <input type="text" name="resume"> </br>
+            <input type="text" name="resume" /> </br>
             <!-- <button id="reserver" type="submit">Réserver</button> -->
 
-            <button type="submit" id="Valider">Valider</button>
+            <button type="submit" id="Valider" />Valider</button>
             <button>Recommencer</button>
         </form>
     </div>

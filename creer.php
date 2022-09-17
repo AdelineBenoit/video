@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>creer</h1>
+    <h1>créer</h1>
 
     <?php
     include("en-tete.php");
@@ -19,15 +19,24 @@
     $password = "root";
     $bdd = "video";
 
-    $film = $_POST["TITRE_FILM"];
+    $film="";
+    $film = $_GET["titre_film"];
+    $type="";
+    $type= $_GET["type"];
+    $annee="";
+    $annee = $_GET["annee"];
+    $sql ="INSERT INTO film ('CODE_TYPE_FILM','TITRE_FILM','ANNEE_FILM') VALUES ($type, $film,$annee)";
+    // INSERT INTO table_name (column1, column2, column3, ...) VALUES (value1, value2, value3, ...);
     var_dump($film);
+    var_dump($type);
+    var_dump($annee);
 
 
     try {
         $connexion = new PDO('mysql:host=' . $server . ';dbname=' . $bdd, $user, $password);
         $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         // echo 'connecté à la base de données'.'<br>';
-        $resultat = $connexion->query($film);
+        $resultat = $connexion->query($sql);
         $datas = $resultat->fetchAll();
         // $resultat2 = $connexion->query($real);
         // $datas2 = $resultat2->fetchAll();
@@ -35,14 +44,18 @@
         $connexion = null;
         // var_dump($datas);
 
+        if (isset($_get["titre_film"]) && ($_get["titre_film"] != ""))
+{
+         $film= $_get["titre_film"];
+        
+} 
+echo "Vous avez ajoutez : " .$film;
 
     }
         catch (PDOException $error) {
             echo 'n° ' . $error->getCode() . '<br/>';
             die('Erreur : ' . $error->getMessage() . '<br/>');
         }
-
-
 
     ?>
     
