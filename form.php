@@ -25,9 +25,8 @@
             <p>Identifiant :</p>
             <input type="text" name="identifiant"> </br>
             <p>Titre :</p>
-            <input type="text" name="titre"> </br>
+            <input type="text" name="TITRE_FILM"> </br>
 
-            
             <!-- <input type="select"> -->
             <libellé>Type de film</libellé> </br>
             <select>
@@ -47,7 +46,9 @@
             <input type="text" name="affiche"> </br>
             <p>Résumé :</p>
             <input type="text" name="resume"> </br>
-            <input type="submit" name="Valider">
+            <!-- <button id="reserver" type="submit">Réserver</button> -->
+
+            <button type="submit" id="Valider">Valider</button>
             <button>Recommencer</button>
         </form>
     </div>

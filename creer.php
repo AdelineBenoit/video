@@ -19,8 +19,8 @@
     $password = "root";
     $bdd = "video";
 
-    $film = $_POST["titre"];
-    // var_dump($film);
+    $film = $_POST["TITRE_FILM"];
+    var_dump($film);
 
 
     try {
@@ -33,7 +33,7 @@
         // $datas2 = $resultat2->fetchAll();
         // var_dump($datas);
         $connexion = null;
-        var_dump($datas);
+        // var_dump($datas);
 
 
     }

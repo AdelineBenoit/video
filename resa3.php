@@ -41,7 +41,8 @@
         $idmovies = $_GET["id_film"];
         $film = "SELECT * FROM film  join star ON id_realis = id_star NATURAL JOIN typefilm WHERE id_film=" . $idmovies;
         $sql = "SELECT * FROM adherent WHERE NUM_ADHERENT;";
-        
+        $film1 = $_GET['titre_film'];
+
         // var_dump($idmovies);
 
         //connexion a la base de donnée
