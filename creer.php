@@ -27,10 +27,10 @@
     $annee = $_GET["annee"];
     $sql ="INSERT INTO film ('CODE_TYPE_FILM','TITRE_FILM','ANNEE_FILM') VALUES ($type, $film,$annee)";
     // INSERT INTO table_name (column1, column2, column3, ...) VALUES (value1, value2, value3, ...);
-    var_dump($film);
-    var_dump($type);
-    var_dump($annee);
-
+    // var_dump($film);
+    // var_dump($type);
+    // var_dump($annee);
+echo "Vous avez ajoutez : " ." ".$film;
 
     try {
         $connexion = new PDO('mysql:host=' . $server . ';dbname=' . $bdd, $user, $password);
@@ -49,7 +49,7 @@
          $film= $_get["titre_film"];
         
 } 
-echo "Vous avez ajoutez : " .$film;
+
 
     }
         catch (PDOException $error) {

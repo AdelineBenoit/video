@@ -49,7 +49,7 @@
             <!-- <button id="reserver" type="submit">Réserver</button> -->
 
             <button type="submit" id="Valider" />Valider</button>
-            <button>Recommencer</button>
+            <button type="reset" id="Vider">Recommencer</button>
         </form>
     </div>
 </body>
