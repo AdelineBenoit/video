@@ -41,6 +41,7 @@
         $idmovies = $_GET["id_film"];
         $film = "SELECT * FROM film  join star ON id_realis = id_star NATURAL JOIN typefilm WHERE id_film=" . $idmovies;
         $sql = "SELECT * FROM adherent WHERE NUM_ADHERENT;";
+        
         // var_dump($idmovies);
 
         //connexion a la base de donnée
@@ -59,7 +60,7 @@
 
 
             //tableau
-            var_dump($datas);
+            // var_dump($datas);
             // foreach ($datas as $el) {
 
                 echo "<td class='ligne'>" . $datas[3] . "</td>";

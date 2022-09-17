@@ -11,7 +11,7 @@
 
 <body>
     <div class="titre">
-        <h1>Réservation de film</h1>
+        <h1>Réservation de film </h1>
     </div>
     <p>resa4</p>
     <?php
@@ -22,9 +22,12 @@
     $user = "root";
     $password = "root";
     $bdd = "video";
-    var_dump($_GET);
+    // var_dump($_GET);
     $adh = $_GET["nom"];
     $adherent = "SELECT adherent.NUM_ADHERENT , adherent.NOM_ADHERENT FROM adherent";
+    $film = "SELECT * FROM film";
+    // var_dump($film);
+    $movies = $_GET["id_film"];
     // var_dump($_GET);
 
     try {
@@ -36,23 +39,32 @@
         // var_dump($datas);
         $resultat = $connexion->query($adherent);
         $datas = $resultat->fetchAll();
+        $resultat1 = $connexion->query($film);
+        $datas1 = $resultat1->fetchAll();
         $connexion = null;
+        // var_dump($datas1);
 
         // var_dump($adherent);
         $bool = false;
         foreach ($datas as $el) {
             if ($el[1] === $adh && $el[0] === $_GET['numero']) {
-                echo "nom" . $el[1];
-                echo "numero" . $el[0] . "</br>";
+                echo "Réussi " . $el[1];
+                // echo "numero" . $el[0] . "</br>";
                 $bool = true;
                 break;
             }
         }
         if ($bool) {
-            echo "Bonjour " . $el[1] . " Vous avez réserver : ";
+            echo "<p class='adherent'>Bonjour </p>" . $el[1] ;
         } else {
-            echo 'Veuillez vous inscrire.';
+            echo ' <p class="refus"> Veuillez vous inscrire.</p>';
         }
+
+            
+                // echo implode ("Vous avez reserver : ".$datas1[2]);
+            
+            
+
     } catch (PDOException $error) {
         echo 'n° ' . $error->getCode() . '<br/>';
         die('Erreur : ' . $error->getMessage() . '<br/>');

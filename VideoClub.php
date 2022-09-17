@@ -42,7 +42,9 @@
 
                 <?php
 
+
                 include("en-tete.php");
+                include("Menu.html");
                 $ad = "SELECT * FROM admin";
 
 
