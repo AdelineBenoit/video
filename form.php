@@ -17,6 +17,7 @@
     <h1 class="titre">Saisie d'un nouveau film</h1>
     <?php
     include("en-tete.php");
+    
     ?>
 
     <div class="creerFilm">

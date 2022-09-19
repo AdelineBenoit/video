@@ -25,12 +25,13 @@
     $type= $_GET["type"];
     $annee="";
     $annee = $_GET["annee"];
-    $sql ="INSERT INTO film ('CODE_TYPE_FILM','TITRE_FILM','ANNEE_FILM') VALUES ($type, $film,$annee)";
+    $sql ="INSERT INTO film (CODE_TYPE_FILM,TITRE_FILM,ANNEE_FILM) VALUES ($type, $film,$annee)";
     // INSERT INTO table_name (column1, column2, column3, ...) VALUES (value1, value2, value3, ...);
     // var_dump($film);
     // var_dump($type);
     // var_dump($annee);
-echo "Vous avez ajoutez : " ." ".$film;
+echo "Vous venez d'ajouter
+ : " ." ".$film ." ";
 
     try {
         $connexion = new PDO('mysql:host=' . $server . ';dbname=' . $bdd, $user, $password);
