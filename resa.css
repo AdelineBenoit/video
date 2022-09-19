@@ -1,54 +1,68 @@
-/* *{
-    background-color: pink;
+*{
+    background-color: bisquer;
     margin: 2%;
     padding: 0%;
     text-decoration: none;
     list-style: none;
-} */
+    color: black;
+} 
 
 
-/* 
+
 .ligne {
     background-color: beige;
     border: 1px solid palevioletred;
     border-radius: 5%;
-} */
-/* table {
+}
+table {
     
-    background-color: aquamarine;
-} */
-/* .menu {
+    background-color: plum;
+}
+
+.menu {
     display: flex;
     color: palevioletred;
-} */
+} 
 
-/* .titre{
+.titre{
     font-style: italic;
     display: flex;
     justify-content: center;
     color: palevioletred;
 
-} */
-/* .date {
+} 
+.date {
 
     display: flex;
     justify-content: flex-end;
+    color: palevioletred;
 
-} */
+} 
 
 
 
-/* #formulaire {
+#formulaire {
     background-color: pink;
     width: 300px;
     height: 150px;
-} */
+} 
 
-/* #admin{
+ #admin{
     background-color: bisque;
-} */
+} 
 
-/* .refus{
+ .refus{
     display: flex;
     justify-content: center;
-} */
+}
+
+.selection{
+    display: flex;
+    justify-content: center;
+
+}
+.valider{
+    display: flex;
+    justify-content: center;
+   
+}

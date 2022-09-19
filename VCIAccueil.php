@@ -14,7 +14,7 @@ include("en-tete.php");
 </head>
 <body>
     <div class="titre">
-    <h1> Bienvenue sur le site du Vidéo-Club</h1>
+    <h1 class="titre"> Bienvenue sur le site du Vidéo-Club</h1>
 </div>
 <?php
 include("Menu.html");

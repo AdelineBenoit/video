@@ -18,7 +18,7 @@ include("en-tete.php");
         <h1>Liste des films :</h1>
         <h1>Sélectionnez le film que vous pouvez réserver :</h1>
     </div>
-    <div>
+    <div class="selection">
         <table>
             <tr>
                 <th class="ligne">Titre</th>
@@ -85,11 +85,13 @@ include("en-tete.php");
 
 
         </table>
-        <button type="bouton"><a href="VCIresa.php">autre type de film</a></button>
+        </div>
+        <div class="valider">
+        <button type="bouton"><a href="VCIResa.php">Autre type de film</a></button>
 
-        <button type="bouton"><a href="VideoClub.php">retour accueil</a></button>
-
-    </div>
+        <button type="bouton"><a href="VCIAccueil.php">Retour àccueil</a></button>
+        </div>
+    
 </body>
 
 </html>

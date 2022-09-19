@@ -35,7 +35,8 @@ include("en-tete.php");
 
     ?>
 <div style="text-align: center;">
-        <h1 style="color: blue;">Sélectionnez le type de films que vous recherchez :</h1>
+
+        <h1 class="titre";">Sélectionnez le type de films que vous recherchez :</h1>
         <form action="resa2.php" method="post">
             <select name="type" id="typeselect">
                 <option value="genre">Sélectionnez le type recherché</option>
