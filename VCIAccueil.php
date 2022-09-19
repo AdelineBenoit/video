@@ -1,6 +1,6 @@
 <?php
-include("VideoClub.php");
-include("Menu.html");
+include("en-tete.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +16,9 @@ include("Menu.html");
     <div class="titre">
     <h1> Bienvenue sur le site du Vidéo-Club</h1>
 </div>
+<?php
+include("Menu.html");
+?>
     
 </body>
 </html>

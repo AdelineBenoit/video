@@ -1,53 +1,54 @@
-*{
+/* *{
+    background-color: pink;
     margin: 2%;
     padding: 0%;
     text-decoration: none;
-}
+    list-style: none;
+} */
 
 
-
+/* 
 .ligne {
-    background-color: aquamarine;
-    border: 1px solid blue;
+    background-color: beige;
+    border: 1px solid palevioletred;
     border-radius: 5%;
-}
-table {
+} */
+/* table {
     
     background-color: aquamarine;
-}
-.menu {
+} */
+/* .menu {
     display: flex;
-}
+    color: palevioletred;
+} */
 
-.titre{
+/* .titre{
     font-style: italic;
     display: flex;
     justify-content: center;
-    color: blue;
+    color: palevioletred;
 
+} */
+/* .date {
 
-}
-.date {
     display: flex;
     justify-content: flex-end;
-    color: blue;
 
-}
-
+} */
 
 
-#formulaire {
-    background-color: rgb(216, 243, 247);
+
+/* #formulaire {
+    background-color: pink;
     width: 300px;
     height: 150px;
+} */
 
+/* #admin{
+    background-color: bisque;
+} */
 
-}
-#admin{
-    background-color: aquamarine;
-}
-
-.refus{
+/* .refus{
     display: flex;
     justify-content: center;
-}
+} */
