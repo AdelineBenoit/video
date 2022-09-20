@@ -14,9 +14,10 @@ include("en-tete.php");
 </head>
 <body>
     <?php
+    /** Les parametres de la bdd sont à mettre dans un fichier à part (comme en-tete.php) **/
     $serveur ="localhost";
     $user = "root";
-    $password= "root";
+    $password= "";
     $bdd= "video";
 
       try {

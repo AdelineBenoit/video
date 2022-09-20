@@ -26,10 +26,11 @@
         <?php
 
         include("en-tete.php");
+                /** Les parametres de la bdd sont à mettre dans un fichier à part (comme en-tete.php) **/
 
         $server = "localhost";
         $user = "root";
-        $password = "root";
+        $password = "";
         $bdd = "video";
 
         // $requete =  "SELECT * FROM film join typefilm on film.CODE_TYPE_FILM = typefilm.CODE_TYPE_FILM WHERE typefilm.CODE_TYPE_FILM = '" . $_POST['type'] . "'";
@@ -67,7 +68,8 @@
                 echo "<td class='ligne'>" . $datas[6] . "</td>";
                 echo "<td class='ligne'>" . $datas[9].' '.$datas[8] . "</td>";
                 // echo "<td classe 'ligne'>" . $datas[5] . "</td>";
-                echo "<td class='ligne' ><a href='resa3.php?id_film=" . $datas['ID_FILM'] . "'><img src='/FilmMiniatures/" . $datas[10] . "/" . $datas[5] . "'></a> </td></tr>";
+                                    /** Toujours ajouter le parametre alt sur les images, au cas où l'image ne s'affiche pas. Attention aux balises auto-fermantes. Attention à l'url de l'image, dans le doute vérifier dans l'inspecteur **/
+                echo "<td class='ligne' ><a href='resa3.php?id_film=" . $datas['ID_FILM'] . "'><img src='FilmMiniatures/" . $datas[10] . "/" . $datas[5] . "' atl=$datas[5] /></a> </td></tr>";
                 // break;
 
                 // echo " Je suis sur resa.3";}

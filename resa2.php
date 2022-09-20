@@ -28,15 +28,17 @@ include("en-tete.php");
             </tr>
 
             <?php
-
+                /** Les parametres de la bdd sont à mettre dans un fichier à part (comme en-tete.php) **/
             $server = "localhost";
             $user = "root";
-            $password = "root";
+            $password = "";
             $bdd = "video";
 
 
             // if($_POST["type"] == "action" ){
             // var_dump($_POST);
+
+            	
             $requete =  "SELECT * FROM film join typefilm on film.CODE_TYPE_FILM = typefilm.CODE_TYPE_FILM join star on star.ID_STAR = film.ID_realis
             WHERE typefilm.CODE_TYPE_FILM = '" . $_POST['type'] . "'";
             // $real = "select star.ID_STAR, star.NOM_STAR, film.ID_REALIS FROM star join film on star.ID_STAR = film.ID_REALIS";
@@ -68,7 +70,8 @@ include("en-tete.php");
                     echo "<tr><td class='ligne'>Titre : " . $el[3] . " </td>";
                     echo "<td class='ligne'>Année : " . $el[4] . " </td>";
                     echo "<td class='ligne'>" . $el['NOM_STAR'] . "</td>";
-                    echo "<td class='ligne' ><a href='resa3.php?id_film=" . $el['ID_FILM'] . "'><img src='/FilmMiniatures/" . $el[8] . "/" . $el[5] . "'></a> </td>";
+                    /** Toujours ajouter le parametre alt sur les images, au cas où l'image ne s'affiche pas. Attention aux balises auto-fermantes. Attention à l'url de l'image, dans le doute vérifier dans l'inspecteur **/
+                    echo "<td class='ligne' ><a href='resa3.php?id_film=" . $el['ID_FILM'] . "'><img src='FilmMiniatures/" . $el[8] . "/" . $el[5] . " ' alt=$el[5] /></a> </td>";
 
                     // echo '<td><img src= strtok (/FilmAffiche/)'.'"></td></tr>';
                     // echo "<img src='/FilmAffiches/>";
@@ -85,13 +88,13 @@ include("en-tete.php");
 
 
         </table>
-        </div>
-        <div class="valider">
+    </div>
+    <div class="valider">
         <button type="bouton"><a href="VCIResa.php">Autre type de film</a></button>
 
         <button type="bouton"><a href="VCIAccueil.php">Retour àccueil</a></button>
-        </div>
-    
+    </div>
+
 </body>
 
 </html>

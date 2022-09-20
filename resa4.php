@@ -17,10 +17,11 @@
     <?php
 
     include("en-tete.php");
+    /** Les parametres de la bdd sont à mettre dans un fichier à part (comme en-tete.php) **/
 
     $server = "localhost";
     $user = "root";
-    $password = "root";
+    $password = "";
     $bdd = "video";
     // var_dump($_GET);
     $adh = $_GET["nom"];
