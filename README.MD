@@ -4,7 +4,9 @@
 
 - Les paramètres de connection à la base de données (bdd), sont à mettre dans un fichier séparé.
 
-- Dans les balises images, il faut toujours mettre un paramètre alt, il sert à mettre un texte au cas où l'image ne s'affiche pas, ce paramètre est également très important pour le référencement (SEO)
+- Dans les balises images, il faut toujours mettre un paramètre alt, il sert à mettre un texte au cas où l'image ne s'affiche pas, ce paramètre est également très important pour le référencement (SEO).
+
+- Attention aux url des images, si elles ne s'affichent pas, penser à vérifier dans l'inspecteur.
 
 - Attention à bien nettoyer le code: commentaires inutiles, lignes vides en trop etc .
 
